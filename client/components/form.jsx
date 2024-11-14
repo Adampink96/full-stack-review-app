@@ -9,13 +9,13 @@ export default function Form({ typeid }) {
   async function handleSubmit(event) {
     event.preventdefault();
     setForm({ username: "", title: "", rating: "", review: "", type: "" });
-    await fetch("http://localhost:8080/reviews", {
-      method: "post",
-      headers: {
-        "content-Type": "application/json",
-      },
-      body: JSON.stringify,
-    });
+    // await fetch("http://localhost:8080/reviews", {
+    //   method: "post",
+    //   headers: {
+    //     "content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(form)
+    // });
   }
 
   function handleChange(event) {

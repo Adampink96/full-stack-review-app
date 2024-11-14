@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #000000 50%, #b30000 50%);
+  height: 100vh;
+  color: white;
+}
+
+.logo {
+  width: 180px;
+  height: 80px;
+  /* opacity: 0.4; */
+}
+
+h1 {
+  position: relative;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: x-large;
+}
+
+a {
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover {
+  background-color: darkgrey;
+}
+a:active {
+  background-color: white;
+}
+a:visited {
+  background-color: lightgray;
+}
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+p {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+  font-family: "Arial", sans-serif;
+}
+
+/* Style input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  width: 30%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Focused input field */
+input:focus,
+textarea:focus {
+  border-color: #5b9bd5;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(91, 155, 213, 0.3);
+}
+
+/* Placeholder styles */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+  opacity: 1; /* Ensures placeholder text is always visible */
+}
+
+/* Input field hover effect */
+input:hover,
+textarea:hover {
+  border-color: #888;
+  background-color: #f0f0f0;
+}
+
+/* Style submit buttons */
+input[type="submit"],
+button {
+  padding: 12px 20px;
+  background-color: #5b9bd5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #4a8bc2;
+}
+
+/* Style input fields with icons (optional) */
+.input-icon {
+  position: relative;
+}
+
+.input-icon input {
+  padding-left: 30px; /* Adjust space for the icon */
+}
+
+.input-icon i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}

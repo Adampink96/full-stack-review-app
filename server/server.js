@@ -54,11 +54,12 @@ app.post("/reviews", async function (request, response) {
   const title = request.body.title;
   const rating = request.body.rating;
   const review = request.body.review;
-  const type = request.body.type;
-  console.log(username, title, rating, review, type);
+  const typeid = request.body.typeid;
+  console.log(username, title, rating, review, typeid);
   const result = await db.query(
-    `INSERT INTO reviews (username, title, rating, review, type) VALUES('${username}','${title}','${rating}','${review}','${type}')`
+    `INSERT INTO reviews (username, title, rating, review, types_id) VALUES('${username}','${title}','${rating}','${review}','${typeid}')`
   );
+  console.log(result);
   response.json(result);
 });
 

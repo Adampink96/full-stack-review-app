@@ -10,6 +10,7 @@ export default function User() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
     console.log(form);
   }
 

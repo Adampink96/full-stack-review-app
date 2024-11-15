@@ -7,15 +7,15 @@ export default function Form({ typeid }) {
     review: "",
   });
   async function handleSubmit(event) {
-    event.preventdefault();
-    setForm({ username: "", title: "", rating: "", review: "", type: "" });
-    // await fetch("http://localhost:8080/reviews", {
-    //   method: "post",
-    //   headers: {
-    //     "content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(form)
-    // });
+    event.preventDefault();
+    setForm({ username: "", title: "", rating: "", review: "", typeid: "" });
+    await fetch("http://localhost:8080/reviews", {
+      method: "post",
+      headers: {
+        "content-Type": "application/json",
+      },
+      body: JSON.stringify({ ...form, typeid }),
+    });
   }
 
   function handleChange(event) {

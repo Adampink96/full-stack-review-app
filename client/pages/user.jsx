@@ -10,7 +10,7 @@ export default function User() {
 
   function handleSubmit(event) {
     event.preventDefault();
-
+    alert("greetings new user, why not go post a review");
     console.log(form);
   }
 

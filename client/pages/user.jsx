@@ -8,10 +8,17 @@ export default function User() {
   });
   const [error, setError] = useState(false);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    alert("greetings new user, why not go post a review");
+    alert("greetings");
     console.log(form);
+    await fetch("http://localhost:8080/username", {
+      method: "post",
+      headers: {
+        "content-Type": "application/json",
+      },
+      body: JSON.stringify({ ...form }),
+    });
   }
 
   function handleChange(e) {

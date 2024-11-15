@@ -21,6 +21,12 @@ app.get("/media", async function (request, response) {
   console.log(media);
 });
 
+app.get("/username", async function (request, response) {
+  const result = await db.query("SELECT * FROM username");
+  const username = result.rows;
+  response.json(username);
+});
+
 // app.get("/reviews", async function (request, response) {
 //   const result = await db.query("SELECT * FROM reviews");
 //   const reviews = result.rows;
@@ -58,6 +64,16 @@ app.post("/reviews", async function (request, response) {
   console.log(username, title, rating, review, typeid);
   const result = await db.query(
     `INSERT INTO reviews (username, title, rating, review, types_id) VALUES('${username}','${title}','${rating}','${review}','${typeid}')`
+  );
+  console.log(result);
+  response.json(result);
+});
+
+app.post("/username", async function (request, response) {
+  const username = request.body.username;
+  console.log(username);
+  const result = await db.query(
+    `INSERT INTO username (name) VALUES('${username}')`
   );
   console.log(result);
   response.json(result);

@@ -21,14 +21,6 @@ export default function App() {
     getReviews();
   }, []);
 
-  // useEffect(()=> {
-  //   async function getGames(){
-  //     const respsone = await fetch("ttp://www.gamespot.com/api/games/?api_key=c2dbae712c6a3b09e9315a018da6322f5de41057");
-  //     const data = await response.json();
-  //     setGames
-  //   }
-  // })
-
   return (
     <div>
       <img className="logo" src="./finallogo.png" alt="logo" />
